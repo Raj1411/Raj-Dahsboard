@@ -189,7 +189,7 @@ def send_email(data):
 
 
 if __name__ == '__main__':
-    schedule.every().day.at("23:47").do(main)
+    schedule.every().day.at("23:52").do(main)
     schedule.run_pending()
     main()
 
