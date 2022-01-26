@@ -24,6 +24,27 @@ from pretty_html_table import build_table
 import time
 
 
+menu_touchup="""
+<style>
+#MainMenu {
+    visibility: hidden;
+}
+footer:before {
+    content: 'Developer [Rajinder Singh]';    
+    display: block;
+    max-width: 1000px;
+    margin:0px auto;
+    width: 100%;
+    height: 30px;
+    position: center;
+    text-align: center;
+    padding: 5px;  
+    top: 3px;
+    background: #666;
+    color: white;
+
+</style>
+"""
 
 
 
@@ -130,7 +151,7 @@ def main():
 
 
     
-    st.markdown('**Developer**: [Rajinder Singh]' , unsafe_allow_html=True)
+    st.markdown(menu_touchup, unsafe_allow_html=True)
 
 
 
