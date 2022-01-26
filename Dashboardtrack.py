@@ -103,23 +103,30 @@ def main():
     # 'Planned Date Meesho','Bool-4','Actual Meesho Date','Planned Date Fk','Bool-5','Actual Fk Date','Planned Date SD','Bool-6','Actual SD Date'])
 
     # st.write(df1[df1['Myntra Planned Diff']==False])
+        
+    run_button=st.button('Run')
 
-    if df1[df1['Myntra Planned Diff']==False].any().any():
-        send_email(data=df1[df1['Myntra Planned Diff']==False])
-    elif df1[df1['Bigbasket Planned Diff']==False].any().any():
-        send_email(data=df1[df1['Bigbasket Planned Diff']==False])
-    elif df1[df1['Trell Planned Diff']==False].any().any():
-        send_email(data=df1[df1['Trell Planned Diff']==False])
-    elif df1[df1['Meesho Planned Diff']==False].any().any():
-        send_email(data=df1[df1['Meesho Planned Diff']==False])
-    elif df1[df1['Flipkart Planned Diff']==False].any().any():
-        send_email(data=df1[df1['Flipkart Planned Diff']==False])
-    elif df1[df1['Snapdeal Planned Diff']==False].any().any():
-        send_email(data=df1[df1['Snapdeal Planned Diff']==False])
+    if run_button:
+
+        if df1[df1['Myntra Planned Diff']==False].any().any():
+            send_email(data=df1[df1['Myntra Planned Diff']==False])
+        elif df1[df1['Bigbasket Planned Diff']==False].any().any():
+            send_email(data=df1[df1['Bigbasket Planned Diff']==False])
+        elif df1[df1['Trell Planned Diff']==False].any().any():
+            send_email(data=df1[df1['Trell Planned Diff']==False])
+        elif df1[df1['Meesho Planned Diff']==False].any().any():
+            send_email(data=df1[df1['Meesho Planned Diff']==False])
+        elif df1[df1['Flipkart Planned Diff']==False].any().any():
+            send_email(data=df1[df1['Flipkart Planned Diff']==False])
+        elif df1[df1['Snapdeal Planned Diff']==False].any().any():
+            send_email(data=df1[df1['Snapdeal Planned Diff']==False])
+        else:
+            st.info('No Changes made to Dashboard')
+            
 
 
     else:
-        pass     
+        pass    
 
 
     
@@ -175,6 +182,8 @@ def send_email(data):
         server.login('srajinder8166@gmail.com','Bobbank@1')
         server.sendmail(msg['from_'], emaillist , msg.as_string())
         server.close()
+        st.success('Email sent!')
+
 
     except Exception as e:
         print("Error for connection: {}".format(e))
@@ -190,10 +199,7 @@ def send_email(data):
 
 
 if __name__ == '__main__':
-    schedule.every().day.at("11:00").do(main)
-    while True:
-        schedule.run_pending()
-        time.sleep(30)
+        main()
 
 
 
