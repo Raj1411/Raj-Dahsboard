@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "raj-dashboard-tracker",
+  "private_key_id": "6c4b7c1091184738d62a9114ba306add9369ab2a",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDIAvIZMPebiD6g\nUAWOQcbY/ncgGp+ZSJT/U6DGziUkIwwmZqxghR5ilAq7A7GbmE1h6MjKKx7jvjGH\nmwrxrOLeOvOgL+PqZrmhxseYbjOxqoZ4NTc1mNZe+1+Mt5tudFZE6lcNzs/Fvy7z\ndE7/lqHqnXdy6hW9lftPrBr3BTjIUlX3QZxVqUHo1R1FLTTVuHyYeAKhMknpTNOQ\n/J9idPNxwhu7KKxyxdjjEqiAXTS3628MRX+369TMZ13TEaQFYG332JW6hV6t4dAj\nDtZ1/u77mY/1E3Fwx82oNNwb3/0U0Eelw9ALgZMiaIu05uXbwqFOJJoMhuTqsGcf\n4nyzrdqZAgMBAAECggEAA8SwcIKQa7T/rxAK5sD9ANocfvWZc68fJYdbFFvObdWe\nNTwCe+gOKD/PSvI5HqwaKyHSZKK22IYdE0e7x01hUdwM+oPkeKZaUX64BHpxDWQf\n1/Ryt5cLVOtKA9Hywvw8otxCax9uITTmqs4SbfTV1KCGX1sjMTj57OiacnR9+yIv\ndxHiOyZoQoYCaBBNcpoNlWAyRxzNo+Zrbh4x+lFtNIIU9wzm5BOjXMMBDAPJHHo2\n039fyMxuCgfPwxPg42ZdJS15okqNuWen5S/YNI9pMVlRCt1jNuhGZvZeaVEG4Bvb\nXyjXRrKH+xkRK8Nr09iCvkpdmlCYutTWjCWjg6AfrQKBgQDkC1f8qrmzyo7DBxbt\nlRj/oFabamd+HGQWJKtEWnpWKKIJC3aUAENwiKbfRtnQZKJwktPUCHKnVXpDzk+c\niduuBxJxlIKLBM8N2Z5u/GUfG01lxafTd00K2jNRwiJshjjt9KpZCMOjl8AlBdBi\nb/6aDDUKjzmcO+u/LS1iChu1pQKBgQDgh9sMWmlT+go90sAutCg8PtLYZ1efwKoO\n2A0f1fsGNTbH9+z9PWAOL4gTB69sW02zHjq4w2JnrjXdjZ44WsKTkDy4iobkdnU6\n4aw9t8aK7+WptQHCTLl3PFpNuFjrFHpUCeVi/te2FamJmi4ukWCy97BzaSZL9oq7\nizYiH5CG5QKBgQCgkFwjSxH1xWk/aH58Sb6QPhS82O6FnPfbn3X3ar04bOOp+qhD\nDOxvD8hu7TPvxuuY18jOQiR4LXcoxtrHHUnP/qq9zhMcTwZ6ef9TpeKNRGv6fHDu\nM9HLEleP+WDDiL4MzXgjuEgHp5Fif/V5WeGqFW5DQRUPLCGROf36SaO5AQKBgDuS\nT//bDQ8GzCjS/cJmcjZpxK892/W6vGPr1q+Xql5fSAWONgaKfi3FVqkV5Oku4FKh\ntprG3Bj+E7SQmmYBTpawMiwUNO3wr/HLZlOJqte6BokcSTcv/BUyohL00kKs0Dfz\n2DSHwNvCq5Sin5YjZDCXnu0//LUy2GQh717mWQYxAoGBALBvxCROvYnoSdvVOLQ8\n5dhh29nIpJ5f86tMmRr77Y2KiMklKtdVQnNiWpjYktttKwM24idsxS28aECxc6FP\n7DLF7VLPhufTKOTzgPx9XjFTe9vEoJP0FJ+j5Zuo4k6hb7HhaMXJBh+1RnRAzkrY\nH+mAzrJWHrxl5Qv1Phjn7/OM\n-----END PRIVATE KEY-----\n",
+  "client_email": "raj-dashboard-track@raj-dashboard-tracker.iam.gserviceaccount.com",
+  "client_id": "104507225535995457054",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/raj-dashboard-track%40raj-dashboard-tracker.iam.gserviceaccount.com"
+}
