@@ -24,6 +24,7 @@ from pretty_html_table import build_table
 import time
 
 
+
 menu_touchup="""
 <style>
 #MainMenu {
@@ -47,10 +48,38 @@ footer:before {
 """
 
 
+# menu_touchup="""
+# <!DOCTYPE html>
+# <html>
+#   <head>
+#     <style>
+#     footer{
+#         position: fixed;
+#         bottom: 0;
+#         width: 100%;
+#         height: 60px;
+#         display: block;
+#         position: right;       
+#         padding: 20px 20px 10px 10px ;
+#         text-align: center;
+#         background: #666;
+#         color: white;
+#       }
+#       a {
+#         color: #00aaff;
+#       }
+#     </style>
+#     <footer>
+#       <p>Developer [Rajinder Singh]</p>
+#     </footer>
+#   </body>
+# </html>
+# """
 
 
 scope=['https://spreadsheets.google.com/feeds',
         'https://www.googleapis.com/auth/drive','https://www.googleapis.com/auth/spreadsheets']
+
 
 
 def main():
@@ -58,8 +87,6 @@ def main():
     # st.image(img,width=200)
     st.markdown('<h1 style="text-align: center;">My Dashboard Changes Tracker</h1>', unsafe_allow_html=True) 
     st.markdown('''---------------------------------------------------------------------------------------------------------''')
-    # st.markdown('''---------------------------------------------------------------------------------------------------------''')
-    # st.markdown('''---------------------------------------------------------------------------------------------------------''')
     
     
     googlesheeturl='https://docs.google.com/spreadsheets/d/1y94y97nPHP-_L4Q05aDZAJg7vzbooloMnJWjLCpd6BM/edit#gid=0'
@@ -80,7 +107,7 @@ def main():
     df.drop(df.index[0],inplace=True)
     df.drop(df.index[2],inplace=True)
     df.drop(df.index[2],inplace=True)
-    st.write(df)
+    # st.write(df)
 
     df1=pasted_value_worksheet.get_all_values()
     df1=pd.DataFrame(df1,columns=['Item Name','Planned Date Myntra','Bool-1','Actual Myntra Date','Po Recd Plan Myntra','Po Recd Actual Myntra','Planned Date Big Basket',
@@ -89,7 +116,7 @@ def main():
     df1.drop(df1.index[0],inplace=True)
     df1.drop(df1.index[2],inplace=True)
     df1.drop(df1.index[2],inplace=True)
-    st.write(df1)
+    # st.write(df1)
 
     comparison_column_myntra=np.where(df.iloc[:,1]==df1.iloc[:,1],True,False)
     df1['Myntra Planned Diff']=comparison_column_myntra
@@ -108,18 +135,16 @@ def main():
 
     comparison_column_snapdeal=np.where(df.iloc[:,22]==df1.iloc[:,22],True,False)
     df1['Snapdeal Planned Diff']=comparison_column_snapdeal
-    
-    st.write(df1)
 
     # df2=build_table(df1,'blue_light')
-#     st.write(df2)
+    # st.write(df2)
 
     # df2=pd.DataFrame(columns=['Item Name','Planned Date Myntra','Bool-1','Actual Myntra Date','Po Recd Plan Myntra','Po Recd Actual Myntra','Planned Date Big Basket',
     # 'Bool-2','Actual Big Basket Date','Po Recd Plan Big B','Po Recd Actual Big B','Planned Date Trell','Bool-3','Actual Trell Date','Po Recd Plan Trell','Po Recd Actual Trell',
     # 'Planned Date Meesho','Bool-4','Actual Meesho Date','Planned Date Fk','Bool-5','Actual Fk Date','Planned Date SD','Bool-6','Actual SD Date'])
 
     # st.write(df1[df1['Myntra Planned Diff']==False])
-        
+
     run_button=st.button('Run')
 
     if run_button:
@@ -142,11 +167,11 @@ def main():
 
 
     else:
-        pass    
+        pass
 
 
-    
-    st.markdown(menu_touchup, unsafe_allow_html=True)
+    # st.markdown('**Developer**: [Rajinder Singh]' , unsafe_allow_html=True)
+    st.markdown(menu_touchup,unsafe_allow_html=True)
 
 
 
@@ -156,7 +181,7 @@ def main():
 
 
 def send_email(data):
-    recipients = ['srajinder816@gmail.com','pramod@swissbeauty.in','rajinder@swissbeauty.in']
+    recipients = ['srajinder816@gmail.com']
     emaillist = [elem.strip().split(',') for elem in recipients]
     msg = MIMEMultipart()
     msg['subject'] = " A Changes have been made to Rajinder's Dashboard"
@@ -200,10 +225,10 @@ def send_email(data):
         server.close()
         st.success('Email sent!')
 
-
     except Exception as e:
-        st.info('No Changes made to Dashboard')
+        print("No Changes made to Dashboard")
         print("Error for connection: {}".format(e))
+ 
 
 
 
@@ -216,7 +241,7 @@ def send_email(data):
 
 
 if __name__ == '__main__':
-        main()
+    main()
 
 
 
