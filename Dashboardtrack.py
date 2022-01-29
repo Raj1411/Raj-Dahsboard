@@ -220,7 +220,7 @@ def send_email(data):
         server = smtplib.SMTP('smtp.gmail.com', 547)
         server.ehlo()
         server.starttls()
-        server.login('srajinder8166@gmail.com','Bobbank@1')
+        server.login('srajinder8166@gmail.com','tugcprtmxgmycwbq')
         server.sendmail(msg['from_'], emaillist , msg.as_string())
         server.quit()
         server.close()
