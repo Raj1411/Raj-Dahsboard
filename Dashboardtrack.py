@@ -226,8 +226,8 @@ def send_email(data):
         st.success('Email sent!')
 
     except Exception as e:
-        print("No Changes made to Dashboard")
-        print("Error for connection: {}".format(e))
+        st.info("No Changes made to Dashboard")
+        st.error("Error for connection: {}".format(e))
  
 
 
