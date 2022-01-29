@@ -80,7 +80,7 @@ def main():
     df.drop(df.index[0],inplace=True)
     df.drop(df.index[2],inplace=True)
     df.drop(df.index[2],inplace=True)
-    # st.write(df)
+    st.write(df)
 
     df1=pasted_value_worksheet.get_all_values()
     df1=pd.DataFrame(df1,columns=['Item Name','Planned Date Myntra','Bool-1','Actual Myntra Date','Po Recd Plan Myntra','Po Recd Actual Myntra','Planned Date Big Basket',
@@ -89,7 +89,7 @@ def main():
     df1.drop(df1.index[0],inplace=True)
     df1.drop(df1.index[2],inplace=True)
     df1.drop(df1.index[2],inplace=True)
-    # st.write(df1)
+    st.write(df1)
 
     comparison_column_myntra=np.where(df.iloc[:,1]==df1.iloc[:,1],True,False)
     df1['Myntra Planned Diff']=comparison_column_myntra
@@ -110,7 +110,7 @@ def main():
     df1['Snapdeal Planned Diff']=comparison_column_snapdeal
 
     # df2=build_table(df1,'blue_light')
-    # st.write(df2)
+    st.write(df2)
 
     # df2=pd.DataFrame(columns=['Item Name','Planned Date Myntra','Bool-1','Actual Myntra Date','Po Recd Plan Myntra','Po Recd Actual Myntra','Planned Date Big Basket',
     # 'Bool-2','Actual Big Basket Date','Po Recd Plan Big B','Po Recd Actual Big B','Planned Date Trell','Bool-3','Actual Trell Date','Po Recd Plan Trell','Po Recd Actual Trell',
