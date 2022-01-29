@@ -222,6 +222,7 @@ def send_email(data):
 #         server.starttls()
         server.login('srajinder8166@gmail.com','Bobbank@1')
         server.sendmail(msg['from_'], emaillist , msg.as_string())
+        server.quit()
         server.close()
         st.success('Email sent!')
 
