@@ -217,9 +217,9 @@ def send_email(data):
     try:
         """Checking for connection errors"""
 
-        server = smtplib.SMTP('smtp.gmail.com', 587)
+        server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
 #         server.ehlo()
-        server.starttls()
+#         server.starttls()
         server.login('srajinder8166@gmail.com','Bobbank@1')
         server.sendmail(msg['from_'], emaillist , msg.as_string())
         server.quit()
