@@ -52,13 +52,6 @@ footer:before {
 scope=['https://spreadsheets.google.com/feeds',
         'https://www.googleapis.com/auth/drive','https://www.googleapis.com/auth/spreadsheets']
 
-totaldays=26
-weekdays=['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']
-frequency=['1','2','4']
-fortnight=['1&3 Week','2&4 Week']
-client_type=['Retailer','Indirect Distributor','Direct Distributor','Super Stockist']
-
-
 
 def main():
     # img=Image.open("D:\\Office\\Python\\Arvind sir\\logo.png")
@@ -207,6 +200,7 @@ def send_email(data):
 
 
     except Exception as e:
+        st.info('No Changes made to Dashboard')
         print("Error for connection: {}".format(e))
 
 
