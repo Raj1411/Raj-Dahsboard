@@ -181,7 +181,7 @@ def main():
 
 
 def send_email(data):
-    recipients = ['srajinder816@gmail.com']
+    recipients = ['srajinder816@gmail.com','pramod@swissbeauty.in','rajinder@swissbeauty.in']
     emaillist = [elem.strip().split(',') for elem in recipients]
     msg = MIMEMultipart()
     msg['subject'] = " A Changes have been made to Rajinder's Dashboard"
@@ -220,13 +220,13 @@ def send_email(data):
         server = smtplib.SMTP('smtp.gmail.com', 587)
         server.ehlo()
         server.starttls()
-        server.login('srajinder8166@gmail.com','Bobbank@1')
+        server.login('srajinder8166@gmail.com','tugcprtmxgmycwbq')
         server.sendmail(msg['from_'], emaillist , msg.as_string())
         server.close()
         st.success('Email sent!')
 
     except Exception as e:
-        print("No Changes made to Dashboard")
+        st.info("No Changes made to Dashboard")
         print("Error for connection: {}".format(e))
  
 
