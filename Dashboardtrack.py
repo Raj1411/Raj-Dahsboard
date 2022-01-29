@@ -110,7 +110,7 @@ def main():
     df1['Snapdeal Planned Diff']=comparison_column_snapdeal
 
     # df2=build_table(df1,'blue_light')
-    st.write(df2)
+#     st.write(df2)
 
     # df2=pd.DataFrame(columns=['Item Name','Planned Date Myntra','Bool-1','Actual Myntra Date','Po Recd Plan Myntra','Po Recd Actual Myntra','Planned Date Big Basket',
     # 'Bool-2','Actual Big Basket Date','Po Recd Plan Big B','Po Recd Actual Big B','Planned Date Trell','Bool-3','Actual Trell Date','Po Recd Plan Trell','Po Recd Actual Trell',
