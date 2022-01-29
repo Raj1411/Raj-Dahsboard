@@ -108,6 +108,8 @@ def main():
 
     comparison_column_snapdeal=np.where(df.iloc[:,22]==df1.iloc[:,22],True,False)
     df1['Snapdeal Planned Diff']=comparison_column_snapdeal
+    
+    st.write(df1)
 
     # df2=build_table(df1,'blue_light')
 #     st.write(df2)
