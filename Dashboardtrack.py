@@ -87,6 +87,7 @@ def main():
     # st.image(img,width=200)
     st.markdown('<h1 style="text-align: center;">My Dashboard Changes Tracker</h1>', unsafe_allow_html=True) 
     st.markdown('''---------------------------------------------------------------------------------------------------------''')
+    st.markdown(menu_touchup,unsafe_allow_html=True)
     
     
     googlesheeturl='https://docs.google.com/spreadsheets/d/1y94y97nPHP-_L4Q05aDZAJg7vzbooloMnJWjLCpd6BM/edit#gid=0'
@@ -118,22 +119,22 @@ def main():
     df1.drop(df1.index[2],inplace=True)
     # st.write(df1)
 
-    comparison_column_myntra=np.where(df.iloc[:,1]==df1.iloc[:,1],True,False)
+    comparison_column_myntra=np.where(df.iloc[:,2]==df1.iloc[:,1],True,False)
     df1['Myntra Planned Diff']=comparison_column_myntra
 
-    comparison_column_bigbasket=np.where(df.iloc[:,6]==df1.iloc[:,6],True,False)
+    comparison_column_bigbasket=np.where(df.iloc[:,7]==df1.iloc[:,6],True,False)
     df1['Bigbasket Planned Diff']=comparison_column_bigbasket
 
-    comparison_column_trell=np.where(df.iloc[:,11]==df1.iloc[:,11],True,False)
+    comparison_column_trell=np.where(df.iloc[:,12]==df1.iloc[:,11],True,False)
     df1['Trell Planned Diff']=comparison_column_trell
 
-    comparison_column_meesho=np.where(df.iloc[:,16]==df1.iloc[:,16],True,False)
+    comparison_column_meesho=np.where(df.iloc[:,17]==df1.iloc[:,16],True,False)
     df1['Meesho Planned Diff']=comparison_column_meesho
 
-    comparison_column_flipkart=np.where(df.iloc[:,19]==df1.iloc[:,19],True,False)
+    comparison_column_flipkart=np.where(df.iloc[:,20]==df1.iloc[:,19],True,False)
     df1['Flipkart Planned Diff']=comparison_column_flipkart
 
-    comparison_column_snapdeal=np.where(df.iloc[:,22]==df1.iloc[:,22],True,False)
+    comparison_column_snapdeal=np.where(df.iloc[:,23]==df1.iloc[:,22],True,False)
     df1['Snapdeal Planned Diff']=comparison_column_snapdeal
 
     # df2=build_table(df1,'blue_light')
@@ -171,9 +172,6 @@ def main():
 
 
     # st.markdown('**Developer**: [Rajinder Singh]' , unsafe_allow_html=True)
-    st.markdown(menu_touchup,unsafe_allow_html=True)
-
-
 
 
 
