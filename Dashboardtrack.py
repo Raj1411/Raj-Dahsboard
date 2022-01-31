@@ -101,7 +101,7 @@ def main():
 
 
     df=main_worksheet.get_all_values()
-    df=pd.DataFrame(df,columns=['Item Name','Planned Date Myntra','Bool-1','Actual Myntra Date','Po Recd Plan Myntra','Po Recd Actual Myntra','Planned Date Big Basket',
+    df=pd.DataFrame(df,columns=['Item Name','Stock Recd On','Planned Date Myntra','Bool-1','Actual Myntra Date','Po Recd Plan Myntra','Po Recd Actual Myntra','Planned Date Big Basket',
     'Bool-2','Actual Big Basket Date','Po Recd Plan Big B','Po Recd Actual Big B','Planned Date Trell','Bool-3','Actual Trell Date','Po Recd Plan Trell','Po Recd Actual Trell',
     'Planned Date Meesho','Bool-4','Actual Meesho Date','Planned Date Fk','Bool-5','Actual Fk Date','Planned Date SD','Bool-6','Actual SD Date'])
 
