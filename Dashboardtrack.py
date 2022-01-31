@@ -119,22 +119,22 @@ def main():
     df1.drop(df1.index[2],inplace=True)
     # st.write(df1)
 
-    comparison_column_myntra=np.where(df.iloc[:,2]==df1.iloc[:,1],True,False)
+    comparison_column_myntra=np.where(df['Planned Date Myntra']==df1['Planned Date Myntra'],True,False)
     df1['Myntra Planned Diff']=comparison_column_myntra
 
-    comparison_column_bigbasket=np.where(df.iloc[:,7]==df1.iloc[:,6],True,False)
+    comparison_column_bigbasket=np.where(df['Planned Date Big Basket']==df1['Planned Date Big Basket'],True,False)
     df1['Bigbasket Planned Diff']=comparison_column_bigbasket
 
-    comparison_column_trell=np.where(df.iloc[:,12]==df1.iloc[:,11],True,False)
+    comparison_column_trell=np.where(df['Planned Date Trell']==df1['Planned Date Trell'],True,False)
     df1['Trell Planned Diff']=comparison_column_trell
 
-    comparison_column_meesho=np.where(df.iloc[:,17]==df1.iloc[:,16],True,False)
+    comparison_column_meesho=np.where(df['Planned Date Meesho']==df1['Planned Date Meesho'],True,False)
     df1['Meesho Planned Diff']=comparison_column_meesho
 
-    comparison_column_flipkart=np.where(df.iloc[:,20]==df1.iloc[:,19],True,False)
+    comparison_column_flipkart=np.where(df['Planned Date Fk']==df1['Planned Date Fk'],True,False)
     df1['Flipkart Planned Diff']=comparison_column_flipkart
 
-    comparison_column_snapdeal=np.where(df.iloc[:,23]==df1.iloc[:,22],True,False)
+    comparison_column_snapdeal=np.where(df['Planned Date SD']==df1['Planned Date SD'],True,False)
     df1['Snapdeal Planned Diff']=comparison_column_snapdeal
 
     # df2=build_table(df1,'blue_light')
@@ -179,7 +179,7 @@ def main():
 
 
 def send_email(data):
-    recipients = ['srajinder816@gmail.com','rajinder@swissbeauty.in','pramod@swissbeauty.in']
+    recipients = ['srajinder816@gmail.com','rajinder@swissbeauty.in']
     emaillist = [elem.strip().split(',') for elem in recipients]
     msg = MIMEMultipart()
     msg['subject'] = " A Changes have been made to Rajinder's Dashboard"
