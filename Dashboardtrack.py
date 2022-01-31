@@ -179,7 +179,7 @@ def main():
 
 
 def send_email(data):
-    recipients = ['srajinder816@gmail.com','rajinder@swissbeauty.in']
+    recipients = ['srajinder816@gmail.com','rajinder@swissbeauty.in','pramod@swissbeauty.in']
     emaillist = [elem.strip().split(',') for elem in recipients]
     msg = MIMEMultipart()
     msg['subject'] = " A Changes have been made to Rajinder's Dashboard"
